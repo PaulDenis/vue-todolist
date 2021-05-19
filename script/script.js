@@ -35,7 +35,11 @@ var app = new Vue (
                     console.log(this.toDoList[index].completata);
 
                 }
-            } 
+            },
+            removeTask: function(index) {
+                this.toDoList.splice(index, 1);
+                // console.log(this.toDoList[index]);
+            }
         }
 
     }

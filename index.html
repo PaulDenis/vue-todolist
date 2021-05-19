@@ -18,7 +18,10 @@
                 :class="toDoList[index].completata ? 'completed' : ''"
                 >
                     {{ toDoList[index].text }}
-                    <i class="fas fa-times-circle"></i>
+                    <i 
+                    class="fas fa-times-circle"
+                    @click="removeTask(index)"
+                    >{{index}}</i>
                 </li>
             </ul>
 
