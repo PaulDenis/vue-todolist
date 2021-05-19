@@ -9,10 +9,23 @@ var app = new Vue (
     {
         el: "#root",
         data: {
-
+            toDoList: [
+                {
+                    text:"Fare l'esercitazione Boolean",
+                    completata: false
+                },
+                {
+                    text:"Tagliare l'erba in giardino",
+                    completata: false
+                },
+                {
+                    text:"Dare da mangiare al pappagallo",
+                    completata: false
+                }
+            ]
         },
         methods: {
-            
+
         }
 
     }
