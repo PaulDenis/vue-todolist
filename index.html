@@ -17,8 +17,10 @@ Predisporre un input per aggiungere un nuovo item alla lista: digitando il tasto
     </head>
     <body>
         <div id="root">
+            <ul>
+                <li v-for="(toDo, index) in toDoList">{{ toDoList[index].text }}</li>
+            </ul>
 
-            
         </div>
 
         <script type="text/javascript" src="script/script.js"></script>
