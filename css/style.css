@@ -13,6 +13,9 @@
     font-size: 26px;
     margin: 30px 0;
 }
+.to_do_list h2 {
+    display: inline-block;
+}
 
 .to_do_list i {
     font-size: 16px;
@@ -20,6 +23,15 @@
 }
 
 .completed {
-    text-decoration: line-through;
-    text-decoration-color: red;
+    text-decoration: line-through red 5px;
+}
+
+.input {
+    margin: 30px;
+    height: 35px;
+    width: 400px;
+}
+button {
+    padding: 5px 10px;
+    border-radius: 15px;
 }

@@ -22,23 +22,32 @@ var app = new Vue (
                     text:"Dare da mangiare al pappagallo",
                     completata: false
                 }
-            ]
+            ],
+            newTask: "",
         },
         methods: {
             setComplete: function(index) {
-                console.log(index);
+                // console.log(index);
                 if(this.toDoList[index].completata == false){
                     this.toDoList[index].completata = true;
-                    console.log(this.toDoList[index].completata);
+                    // console.log(this.toDoList[index].completata);
                 } else {
                     this.toDoList[index].completata = false;
-                    console.log(this.toDoList[index].completata);
+                    // console.log(this.toDoList[index].completata);
 
                 }
             },
             removeTask: function(index) {
                 this.toDoList.splice(index, 1);
                 // console.log(this.toDoList[index]);
+            },
+            addTask: function () {
+                if(this.newTask.trim() != "") {
+                    this.toDoList.push({'text': this.newTask, 'completata': false});
+                    this.newTask = "";
+                } else {
+                    this.newTask = "";
+                }
             }
         }
 
