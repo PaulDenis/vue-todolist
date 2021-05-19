@@ -1,24 +1,25 @@
-<!-- Creare con Vue una to-do list, in cui ogni elemento è un oggetto composto da:
-- testo
-- "completed", un booleano settato inizialmente a false.
-Stampare in pagina un item per ogni elemento della to-do list.
-Ogni item ha una "x" associata: cliccando su di essa, l'item viene rimosso dalla lista.
-Predisporre un input per aggiungere un nuovo item alla lista: digitando il tasto invio oppure cliccando su un pulsante, il testo digitato viene aggiunto alla lista (all'interno di un nuovo oggetto con proprietà "completed" settata a false). -->
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/style.css">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <title>Vue ToDo-List</title>
     </head>
     <body>
         <div id="root">
-            <ul>
-                <li v-for="(toDo, index) in toDoList">{{ toDoList[index].text }}</li>
+            <ul class="to_do_list">
+                <li 
+                v-for="(toDo, index) in toDoList"
+                @click="setComplete(index)"
+                :class="toDoList[index].completata ? 'completed' : ''"
+                >
+                    {{ toDoList[index].text }}
+                    <i class="fas fa-times-circle"></i>
+                </li>
             </ul>
 
         </div>

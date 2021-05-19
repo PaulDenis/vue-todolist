@@ -25,7 +25,17 @@ var app = new Vue (
             ]
         },
         methods: {
+            setComplete: function(index) {
+                console.log(index);
+                if(this.toDoList[index].completata == false){
+                    this.toDoList[index].completata = true;
+                    console.log(this.toDoList[index].completata);
+                } else {
+                    this.toDoList[index].completata = false;
+                    console.log(this.toDoList[index].completata);
 
+                }
+            } 
         }
 
     }
